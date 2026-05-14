@@ -277,6 +277,27 @@
         font-size: 0.88rem;
       }
 
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 18px;
+        padding: 12px 18px;
+        border-radius: 12px;
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        color: #08111f;
+        font-weight: 700;
+        text-decoration: none;
+        box-shadow: 0 12px 36px rgba(125,211,252,0.12);
+        border: 1px solid rgba(255,255,255,0.06);
+      }
+
+      .cta:hover,
+      .cta:focus {
+        transform: translateY(-3px);
+        box-shadow: 0 18px 52px rgba(125,211,252,0.16);
+      }
+
       .arrow {
         color: var(--muted);
         font-size: 1.1rem;
@@ -347,32 +368,29 @@
         <div class="hero">
           <span class="badge"><span class="badge-dot"></span> Connect with me everywhere</span>
           <h1>Tlou Connect</h1>
-          <p class="lead">
-            A curated social hub for Tlou — one premium page with direct access to
-            Instagram reels, TikTok clips, WhatsApp messages, YouTube videos, email,
-            and Facebook. Visitors can follow, message, or watch with a single tap.
-          </p>
-
-          <div class="stats" aria-label="Highlights">
-            <div class="stat">
-              <strong>01</strong>
-              <span>Primary profile for all social links</span>
-            </div>
-            <div class="stat">
-              <strong>06</strong>
-              <span>Quick-access social destinations</span>
-            </div>
-            <div class="stat">
-              <strong>24/7</strong>
-              <span>Always available from any device</span>
-            </div>
+          <div class="lead">
+            <img src="images/services.jpeg" alt="Tlou services" style="width:100%;max-width:420px;border-radius:12px;margin:10px 0 14px;display:block;" />
+            <strong>Services & Products</strong>
+            <br />
+            <ul>
+              <li><strong>Reset Your Body</strong> — <em>Mucus-Free Body (E-book)</em> — R250</li>
+              <li><strong>Face Time (One-on-One)</strong> — Clarity & Reset Session — R350 (one-off)</li>
+              <li><strong>Inner Circle</strong> — WhatsApp community (mindset, nutrition, discipline) — Fee: R500 / Monthly: R500</li>
+              <li><strong>Online Gym Coaching</strong> — No space, no equipment — R400 / month</li>
+              <li><strong>Family Plan (2–4 people)</strong> — Train together — R600 / month</li>
+              <li><strong>Free Weekly Session</strong> — Sunday Reset Live (Q&A) on TikTok — Sundays 16:00–17:00</li>
+              <li><strong>Contact / Bookings (WhatsApp only):</strong> +27 78 359 5264 — message to book services & buy products</li>
+            </ul>
           </div>
+
+          <a class="cta" href="https://wa.me/27783595264?text=Hello%20Tlou%2C%20I%20want%20to%20book%20services%20and%20buy%20products" target="_blank" rel="noopener noreferrer" aria-label="Book services on WhatsApp">Book / Buy on WhatsApp</a>
+
         </div>
 
         <aside class="links-panel">
           <div class="profile">
             <div class="avatar">
-              <img src="images/Picture1.jpg" alt="Tlou profile photo" class="avatar-img" />
+              <img src="images/Picture1.jpg" alt="Tlou profile" class="avatar-img" />
             </div>
             <div>
               <h2>Tlou</h2>
@@ -381,23 +399,23 @@
           </div>
 
           <nav class="links" aria-label="Social links">
+            <a class="link" href="https://wa.me/27783595264?text=Hello%20Tlou%2C%20I%20want%20to%20book%20services%20and%20buy%20products" target="_blank" rel="noreferrer noopener" data-track="social-link" data-platform="whatsapp" data-label="WhatsApp">
+              <span class="link-left">
+                <span class="icon">✦</span>
+                <span>
+                  <span class="link-title">WhatsApp (Bookings & Purchases)</span>
+                  <span class="link-subtitle">Message to book services or buy products</span>
+                </span>
+              </span>
+              <span class="arrow">↗</span>
+            </a>
+
             <a class="link" href="https://www.instagram.com/reel/DYLFLC3MM7q/?igsh=MWNhdG05MG0xOGxodw==" target="_blank" rel="noreferrer noopener" data-track="social-link" data-platform="instagram" data-label="Instagram">
               <span class="link-left">
                 <span class="icon">◎</span>
                 <span>
                   <span class="link-title">Instagram</span>
                   <span class="link-subtitle">Photos, stories, and updates</span>
-                </span>
-              </span>
-              <span class="arrow">↗</span>
-            </a>
-
-            <a class="link" href="https://wa.me/message/X5M6LBKOWY62O1" target="_blank" rel="noreferrer noopener" data-track="social-link" data-platform="whatsapp" data-label="WhatsApp">
-              <span class="link-left">
-                <span class="icon">✦</span>
-                <span>
-                  <span class="link-title">WhatsApp</span>
-                  <span class="link-subtitle">Fast direct conversations</span>
                 </span>
               </span>
               <span class="arrow">↗</span>

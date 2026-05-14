@@ -336,6 +336,46 @@
         }
       }
 
+      .intro-section {
+        width: min(100%, 960px);
+        padding: 32px;
+        border: 1px solid var(--panel-border);
+        border-radius: 28px;
+        background: var(--panel);
+        -webkit-backdrop-filter: blur(18px);
+        backdrop-filter: blur(18px);
+        box-shadow: var(--shadow);
+        margin-bottom: 24px;
+      }
+
+      .intro-section h2 {
+        margin: 0 0 16px;
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+        line-height: 1.2;
+        letter-spacing: -0.05em;
+        font-family: var(--heading-font);
+        font-weight: 700;
+        background: linear-gradient(135deg, var(--accent), var(--accent-2));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .intro-section p {
+        margin: 12px 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+        line-height: 1.8;
+      }
+
+      .intro-section p:first-of-type {
+        margin-top: 0;
+      }
+
+      .intro-section strong {
+        color: var(--text);
+      }
+
       @media (max-width: 640px) {
         .page {
           padding: 16px;
@@ -359,15 +399,28 @@
         .stats {
           grid-template-columns: 1fr;
         }
+
+        .intro-section {
+          padding: 20px;
+          border-radius: 22px;
+        }
       }
     </style>
   </head>
   <body>
     <main class="page">
+      <section class="intro-section" aria-label="Introduction">
+        <h2>Welcome to Sweat Studio with Tlou</h2>
+        <p><strong>Blessings God, I'm Tlou</strong> your guide to holistic wellness. I offer personalized FaceTime consultations and online training no equipment, no space needed, just your phone. No excuses, just results.</p>
+        <p>Join my exclusive WhatsApp group where we decode the Bible, break down disease, and empower your healing journey through deeper understanding of the mind, body, and spirit.</p>
+        <p>Plus, grab my e-book on mucus removal to help reset and cleanse your body naturally.</p>
+        <p><strong>Contact me on WhatsApp today</strong> to access these transformative services and products. Welcome to Sweat Studio with Tlou⁠ — Do this. See that. Get yours</p>
+      </section>
+
       <section class="card" aria-label="Social link landing page">
         <div class="hero">
           <span class="badge"><span class="badge-dot"></span> Connect with me everywhere</span>
-          <h1>Tlou Connect</h1>
+          <h1> Sweat Studio with Tlou</h1>
           <div class="lead">
             <img src="images/services.jpeg" alt="Tlou services" style="width:100%;max-width:420px;border-radius:12px;margin:10px 0 14px;display:block;" />
             <strong>Services & Products</strong>
@@ -390,14 +443,15 @@
         <aside class="links-panel">
           <div class="profile">
             <div class="avatar">
-              <img src="images/Picture1.jpg" alt="Tlou profile" class="avatar-img" />
+              <img src="images/profile_pic.jpeg" alt="Tlou profile" class="avatar-img" />
             </div>
+            <br>
             <div>
-              <h2>Tlou</h2>
+              <h2> Sweat Studio with Tlou</h2>
               <p>Curated links, one place, one tap.</p>
             </div>
           </div>
-
+<br>
           <nav class="links" aria-label="Social links">
             <a class="link" href="https://wa.me/27783595264?text=Hello%20Tlou%2C%20I%20want%20to%20book%20services%20and%20buy%20products" target="_blank" rel="noreferrer noopener" data-track="social-link" data-platform="whatsapp" data-label="WhatsApp">
               <span class="link-left">

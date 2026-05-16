@@ -3,48 +3,51 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tlou Connect</title>
+    <title>Sweat Studio with Tlou</title>
     <meta
       name="description"
-      content="A modern landing page for connecting all your social links in one place."
+      content="Book online coaching, wellness consultations, WhatsApp community access, and e-books with Sweat Studio with Tlou."
     />
-    
+
     <!-- Favicons -->
     <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
     <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png" />
-    
+
     <!-- Open Graph Tags -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tlou-connect.com" />
-    <meta property="og:title" content="Sweat Studio with Tlou — Holistic Wellness Coaching" />
+    <meta property="og:title" content="Sweat Studio with Tlou - Holistic Wellness Coaching" />
     <meta property="og:description" content="Personalized FaceTime consultations, online training with no equipment needed, WhatsApp wellness community, and e-books for holistic health transformation." />
-    <meta property="og:image" content="images/og-image.png" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:site_name" content="Tlou Connect" />
-    
+    <meta property="og:image" content="images/Picture1.jpg" />
+    <meta property="og:image:width" content="602" />
+    <meta property="og:image:height" content="602" />
+    <meta property="og:site_name" content="Sweat Studio with Tlou" />
+
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Sweat Studio with Tlou — Holistic Wellness Coaching" />
+    <meta name="twitter:title" content="Sweat Studio with Tlou - Holistic Wellness Coaching" />
     <meta name="twitter:description" content="Personalized FaceTime consultations, online training with no equipment needed, WhatsApp wellness community, and e-books for holistic health transformation." />
-    <meta name="twitter:image" content="images/og-image.png" />
+    <meta name="twitter:image" content="images/Picture1.jpg" />
+
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap");
 
       :root {
         color-scheme: dark;
-        --bg: #08111f;
-        --bg-2: #0f1a2f;
-        --panel: rgba(10, 17, 31, 0.72);
-        --panel-border: rgba(255, 255, 255, 0.12);
-        --text: #f5f7fb;
-        --muted: #b5bfd3;
-        --accent: #7dd3fc;
-        --accent-2: #f9a8d4;
-        --shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+        --bg: #11160f;
+        --bg-2: #252217;
+        --panel: rgba(22, 25, 18, 0.82);
+        --panel-soft: rgba(255, 249, 238, 0.055);
+        --panel-border: rgba(244, 232, 208, 0.16);
+        --text: #fff9ee;
+        --muted: #d7cbb9;
+        --accent: #b7d7a8;
+        --accent-2: #f2c879;
+        --clay: #c77854;
+        --shadow: 0 24px 80px rgba(0, 0, 0, 0.35);
         --heading-font: "Cormorant Garamond", Georgia, serif;
         --body-font: "Manrope", "Segoe UI", Arial, sans-serif;
       }
@@ -63,8 +66,8 @@
         font-family: var(--body-font);
         color: var(--text);
         background:
-          radial-gradient(circle at top left, rgba(125, 211, 252, 0.28), transparent 28%),
-          radial-gradient(circle at top right, rgba(249, 168, 212, 0.22), transparent 30%),
+          radial-gradient(circle at top left, rgba(183, 215, 168, 0.22), transparent 30%),
+          radial-gradient(circle at top right, rgba(242, 200, 121, 0.18), transparent 28%),
           linear-gradient(135deg, var(--bg), var(--bg-2));
       }
 
@@ -74,46 +77,105 @@
         inset: 0;
         pointer-events: none;
         background-image:
-          linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-          linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+          linear-gradient(rgba(255, 249, 238, 0.035) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255, 249, 238, 0.035) 1px, transparent 1px);
         background-size: 72px 72px;
-        -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), transparent 85%);
-        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.45), transparent 85%);
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.42), transparent 82%);
+        mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.42), transparent 82%);
       }
 
       .page {
         position: relative;
         z-index: 1;
         min-height: 100vh;
-        display: grid;
-        place-items: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         padding: 32px 16px;
       }
 
+      .intro-section,
       .card {
         width: min(100%, 960px);
-        display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
-        gap: 24px;
-        padding: 24px;
         border: 1px solid var(--panel-border);
-        border-radius: 28px;
+        border-radius: 20px;
         background: var(--panel);
         -webkit-backdrop-filter: blur(18px);
         backdrop-filter: blur(18px);
         box-shadow: var(--shadow);
+      }
+
+      .intro-section {
+        padding: 32px;
+        margin-bottom: 24px;
+      }
+
+      .eyebrow {
+        margin: 0 0 12px;
+        color: var(--accent-2);
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .intro-section h1 {
+        margin: 0 0 16px;
+        max-width: 12ch;
+        font-family: var(--heading-font);
+        font-size: 4.4rem;
+        font-weight: 700;
+        line-height: 0.96;
+        letter-spacing: 0;
+      }
+
+      .intro-section p {
+        max-width: 68ch;
+        margin: 12px 0;
+        color: var(--muted);
+        font-size: 1.05rem;
+        line-height: 1.75;
+      }
+
+      .intro-section strong {
+        color: var(--text);
+      }
+
+      .quick-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 22px;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        min-height: 36px;
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: rgba(255, 249, 238, 0.06);
+        border: 1px solid rgba(255, 249, 238, 0.1);
+        color: var(--muted);
+        font-size: 0.88rem;
+      }
+
+      .card {
+        display: grid;
+        grid-template-columns: 1.1fr 0.9fr;
+        gap: 24px;
+        padding: 24px;
         overflow: hidden;
       }
 
       .hero,
       .links-panel {
-        border-radius: 22px;
-        background: rgba(255, 255, 255, 0.03);
-        border: 1px solid rgba(255, 255, 255, 0.06);
+        border-radius: 16px;
+        background: var(--panel-soft);
+        border: 1px solid rgba(255, 249, 238, 0.08);
       }
 
       .hero {
-        padding: 32px;
+        padding: 30px;
         position: relative;
         overflow: hidden;
       }
@@ -125,7 +187,7 @@
         width: 240px;
         height: 240px;
         border-radius: 50%;
-        background: radial-gradient(circle, rgba(125, 211, 252, 0.32), transparent 68%);
+        background: radial-gradient(circle, rgba(242, 200, 121, 0.24), transparent 68%);
         filter: blur(6px);
       }
 
@@ -135,8 +197,8 @@
         gap: 10px;
         padding: 8px 14px;
         border-radius: 999px;
-        border: 1px solid rgba(255, 255, 255, 0.12);
-        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 249, 238, 0.14);
+        background: rgba(255, 249, 238, 0.055);
         color: var(--muted);
         font-size: 0.9rem;
       }
@@ -146,52 +208,119 @@
         height: 10px;
         border-radius: 50%;
         background: linear-gradient(135deg, var(--accent), var(--accent-2));
-        box-shadow: 0 0 18px rgba(125, 211, 252, 0.6);
+        box-shadow: 0 0 18px rgba(183, 215, 168, 0.55);
       }
 
-      h1 {
+      .hero h2 {
         margin: 20px 0 14px;
-        font-size: clamp(2.4rem, 5vw, 4.8rem);
-        line-height: 0.96;
-        letter-spacing: -0.05em;
-        max-width: 10ch;
+        max-width: 12ch;
         font-family: var(--heading-font);
+        font-size: 3.4rem;
         font-weight: 700;
+        line-height: 1;
+        letter-spacing: 0;
       }
 
       .lead {
-        max-width: 52ch;
+        max-width: 54ch;
         margin: 0;
         color: var(--muted);
-        font-size: 1.07rem;
+        font-size: 1.02rem;
         line-height: 1.7;
       }
 
-      .stats {
+      .hero-media {
+        width: 100%;
+        max-width: 460px;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border-radius: 14px;
+        margin: 22px 0;
+        display: block;
+        border: 1px solid rgba(255, 249, 238, 0.12);
+      }
+
+      .cta-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 22px;
+      }
+
+      .cta {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 48px;
+        gap: 10px;
+        padding: 12px 18px;
+        border-radius: 12px;
+        background: linear-gradient(90deg, var(--accent), var(--accent-2));
+        color: #11160f;
+        font-weight: 800;
+        text-decoration: none;
+        box-shadow: 0 12px 36px rgba(242, 200, 121, 0.16);
+        border: 1px solid rgba(255, 249, 238, 0.08);
+        transition:
+          transform 180ms ease,
+          box-shadow 180ms ease;
+      }
+
+      .cta:hover,
+      .cta:focus-visible {
+        transform: translateY(-3px);
+        box-shadow: 0 18px 52px rgba(242, 200, 121, 0.22);
+        outline: none;
+      }
+
+      .cta.secondary {
+        background: rgba(255, 249, 238, 0.06);
+        color: var(--text);
+        box-shadow: none;
+      }
+
+      .section-label {
+        margin: 26px 0 12px;
+        color: var(--accent-2);
+        font-size: 0.82rem;
+        font-weight: 800;
+        text-transform: uppercase;
+      }
+
+      .service-list {
         display: grid;
-        grid-template-columns: repeat(3, minmax(0, 1fr));
-        gap: 14px;
-        margin-top: 28px;
+        gap: 12px;
+        margin-top: 0;
       }
 
-      .stat {
-        padding: 16px;
-        border-radius: 18px;
-        background: rgba(255, 255, 255, 0.04);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+      .service-item {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        gap: 10px 16px;
+        padding: 15px;
+        border-radius: 14px;
+        background: rgba(255, 249, 238, 0.055);
+        border: 1px solid rgba(255, 249, 238, 0.09);
       }
 
-      .stat strong {
-        display: block;
-        font-size: 1.35rem;
-        letter-spacing: -0.03em;
+      .service-item h3 {
+        margin: 0;
+        font-size: 1rem;
       }
 
-      .stat span {
-        display: block;
-        margin-top: 6px;
+      .service-item p {
+        margin: 5px 0 0;
         color: var(--muted);
         font-size: 0.9rem;
+        line-height: 1.5;
+      }
+
+      .service-price {
+        justify-self: end;
+        align-self: start;
+        color: var(--text);
+        font-weight: 800;
+        white-space: nowrap;
       }
 
       .links-panel {
@@ -210,13 +339,14 @@
       .avatar {
         width: 58px;
         height: 58px;
-        border-radius: 18px;
+        flex: 0 0 auto;
+        border-radius: 14px;
         display: grid;
         place-items: center;
         font-weight: 700;
         font-size: 1.2rem;
-        background: linear-gradient(135deg, rgba(125, 211, 252, 0.95), rgba(249, 168, 212, 0.95));
-        color: #08111f;
+        background: linear-gradient(135deg, rgba(183, 215, 168, 0.98), rgba(242, 200, 121, 0.98));
+        color: #11160f;
       }
 
       .avatar-img {
@@ -224,7 +354,7 @@
         height: 100%;
         display: block;
         object-fit: cover;
-        border-radius: 18px;
+        border-radius: 14px;
       }
 
       .profile h2 {
@@ -232,7 +362,7 @@
         font-size: 1.25rem;
         font-family: var(--heading-font);
         font-weight: 700;
-        letter-spacing: -0.02em;
+        letter-spacing: 0;
       }
 
       .profile p {
@@ -254,9 +384,9 @@
         text-decoration: none;
         color: var(--text);
         padding: 15px 16px;
-        border-radius: 18px;
-        background: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 14px;
+        background: rgba(255, 249, 238, 0.055);
+        border: 1px solid rgba(255, 249, 238, 0.08);
         transition:
           transform 180ms ease,
           border-color 180ms ease,
@@ -266,8 +396,8 @@
       .link:hover,
       .link:focus-visible {
         transform: translateY(-2px);
-        border-color: rgba(125, 211, 252, 0.35);
-        background: rgba(255, 255, 255, 0.09);
+        border-color: rgba(183, 215, 168, 0.45);
+        background: rgba(255, 249, 238, 0.095);
         outline: none;
       }
 
@@ -275,22 +405,27 @@
         display: flex;
         align-items: center;
         gap: 12px;
+        min-width: 0;
       }
 
       .icon {
         width: 42px;
         height: 42px;
-        border-radius: 14px;
+        flex: 0 0 auto;
+        border-radius: 12px;
         display: grid;
         place-items: center;
-        background: rgba(125, 211, 252, 0.16);
-        border: 1px solid rgba(125, 211, 252, 0.18);
-        font-size: 1.05rem;
+        background: rgba(183, 215, 168, 0.14);
+        border: 1px solid rgba(183, 215, 168, 0.2);
+        color: var(--text);
+        font-size: 0.88rem;
+        font-weight: 800;
       }
 
       .link-title {
-        font-weight: 600;
-        letter-spacing: -0.01em;
+        display: block;
+        font-weight: 700;
+        letter-spacing: 0;
       }
 
       .link-subtitle {
@@ -300,30 +435,11 @@
         font-size: 0.88rem;
       }
 
-      .cta {
-        display: inline-flex;
-        align-items: center;
-        gap: 10px;
-        margin-top: 18px;
-        padding: 12px 18px;
-        border-radius: 12px;
-        background: linear-gradient(90deg, var(--accent), var(--accent-2));
-        color: #08111f;
-        font-weight: 700;
-        text-decoration: none;
-        box-shadow: 0 12px 36px rgba(125,211,252,0.12);
-        border: 1px solid rgba(255,255,255,0.06);
-      }
-
-      .cta:hover,
-      .cta:focus {
-        transform: translateY(-3px);
-        box-shadow: 0 18px 52px rgba(125,211,252,0.16);
-      }
-
-      .arrow {
+      .link-action {
         color: var(--muted);
-        font-size: 1.1rem;
+        font-size: 0.86rem;
+        font-weight: 700;
+        white-space: nowrap;
       }
 
       .footer-note {
@@ -354,49 +470,9 @@
           grid-template-columns: 1fr;
         }
 
-        .hero {
-          padding: 26px;
+        .intro-section h1 {
+          font-size: 3.5rem;
         }
-      }
-
-      .intro-section {
-        width: min(100%, 960px);
-        padding: 32px;
-        border: 1px solid var(--panel-border);
-        border-radius: 28px;
-        background: var(--panel);
-        -webkit-backdrop-filter: blur(18px);
-        backdrop-filter: blur(18px);
-        box-shadow: var(--shadow);
-        margin-bottom: 24px;
-      }
-
-      .intro-section h2 {
-        margin: 0 0 16px;
-        font-size: clamp(1.8rem, 4vw, 2.8rem);
-        line-height: 1.2;
-        letter-spacing: -0.05em;
-        font-family: var(--heading-font);
-        font-weight: 700;
-        background: linear-gradient(135deg, var(--accent), var(--accent-2));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        background-clip: text;
-      }
-
-      .intro-section p {
-        margin: 12px 0;
-        color: var(--muted);
-        font-size: 1.05rem;
-        line-height: 1.8;
-      }
-
-      .intro-section p:first-of-type {
-        margin-top: 0;
-      }
-
-      .intro-section strong {
-        color: var(--text);
       }
 
       @media (max-width: 640px) {
@@ -404,28 +480,47 @@
           padding: 16px;
         }
 
+        .intro-section,
         .card {
-          padding: 14px;
-          border-radius: 22px;
-        }
-
-        .hero,
-        .links-panel {
           border-radius: 18px;
         }
 
+        .intro-section {
+          padding: 22px;
+        }
+
+        .intro-section h1 {
+          font-size: 2.85rem;
+        }
+
+        .card {
+          padding: 14px;
+        }
+
         .hero,
         .links-panel {
           padding: 20px;
+          border-radius: 14px;
         }
 
-        .stats {
+        .hero h2 {
+          font-size: 2.55rem;
+        }
+
+        .service-item {
           grid-template-columns: 1fr;
         }
 
-        .intro-section {
-          padding: 20px;
-          border-radius: 22px;
+        .service-price {
+          justify-self: start;
+        }
+
+        .link {
+          align-items: flex-start;
+        }
+
+        .link-action {
+          display: none;
         }
       }
     </style>
@@ -433,34 +528,96 @@
   <body>
     <main class="page">
       <section class="intro-section" aria-label="Introduction">
-        <h2>Welcome to Sweat Studio with Tlou</h2>
-        <p><strong>Blessings God, I'm Tlou</strong> your guide to holistic wellness. I offer personalized FaceTime consultations and online training no equipment, no space needed, just your phone. No excuses, just results.</p>
-        <p>Join my exclusive WhatsApp group where we decode the Bible, break down disease, and empower your healing journey through deeper understanding of the mind, body, and spirit.</p>
-        <p>Plus, grab my e-book on mucus removal to help reset and cleanse your body naturally.</p>
-        <p><strong>Contact me on WhatsApp today</strong> to access these transformative services and products. Welcome to Sweat Studio with Tlou⁠ — Do this. See that. Get yours</p>
+        <p class="eyebrow">Holistic wellness coaching</p>
+        <h1>Sweat Studio with Tlou</h1>
+        <p>
+          <strong>Blessings God, I'm Tlou.</strong> I offer personalized FaceTime consultations,
+          online training with no equipment needed, wellness resources, and a WhatsApp community
+          for people ready to reset their body, mindset, and daily discipline.
+        </p>
+        <p>
+          Bookings and purchases are handled on WhatsApp, so visitors can move from interest to
+          action in one tap.
+        </p>
+
+        <div class="quick-pills" aria-label="Service highlights">
+          <span class="pill">No equipment needed</span>
+          <span class="pill">WhatsApp community</span>
+          <span class="pill">FaceTime consultations</span>
+          <span class="pill">Sunday TikTok live</span>
+        </div>
+
+        <div class="cta-row">
+          <a class="cta" href="https://wa.me/27783595264?text=Hello%20Tlou%2C%20I%20want%20to%20book%20services%20and%20buy%20products" target="_blank" rel="noopener noreferrer">Book on WhatsApp</a>
+          <a class="cta secondary" href="#services">View services</a>
+        </div>
       </section>
 
-      <section class="card" aria-label="Social link landing page">
-        <div class="hero">
-          <span class="badge"><span class="badge-dot"></span> Connect with me everywhere</span>
-          <h1> Sweat Studio with Tlou</h1>
-          <div class="lead">
-            <img src="images/services.jpeg" alt="Tlou services" style="width:100%;max-width:420px;border-radius:12px;margin:10px 0 14px;display:block;" />
-            <strong>Services & Products</strong>
-            <br />
-            <ul>
-              <li><strong>Reset Your Body</strong> — <em>Mucus-Free Body (E-book)</em> — R250</li>
-              <li><strong>Face Time (One-on-One)</strong> — Clarity & Reset Session — R350 (one-off)</li>
-              <li><strong>Inner Circle</strong> — WhatsApp community (mindset, nutrition, discipline) — Fee: R500 / Monthly: R500</li>
-              <li><strong>Online Gym Coaching</strong> — No space, no equipment — R400 / month</li>
-              <li><strong>Family Plan (2–4 people)</strong> — Train together — R600 / month</li>
-              <li><strong>Free Weekly Session</strong> — Sunday Reset Live (Q&A) on TikTok — Sundays 16:00–17:00</li>
-              <li><strong>Contact / Bookings (WhatsApp only):</strong> +27 78 359 5264 — message to book services & buy products</li>
-            </ul>
+      <section class="card" aria-label="Sweat Studio links and services">
+        <div class="hero" id="services">
+          <span class="badge"><span class="badge-dot"></span> Services and products</span>
+          <h2>Reset, train, and grow with Tlou.</h2>
+          <p class="lead">
+            Choose the support that fits your season: a one-on-one clarity session, monthly coaching,
+            inner circle access, or the mucus-free body e-book.
+          </p>
+
+          <img src="images/services.jpeg" alt="Sweat Studio services and products" class="hero-media" />
+
+          <p class="section-label">Choose your next step</p>
+          <div class="service-list">
+            <article class="service-item">
+              <div>
+                <h3>Reset Your Body</h3>
+                <p>Mucus-Free Body e-book for a natural cleanse and reset.</p>
+              </div>
+              <span class="service-price">R250</span>
+            </article>
+
+            <article class="service-item">
+              <div>
+                <h3>FaceTime One-on-One</h3>
+                <p>Clarity and reset session for personalized guidance.</p>
+              </div>
+              <span class="service-price">R350</span>
+            </article>
+
+            <article class="service-item">
+              <div>
+                <h3>Inner Circle</h3>
+                <p>WhatsApp community for mindset, nutrition, discipline, and spiritual growth.</p>
+              </div>
+              <span class="service-price">R500 / month</span>
+            </article>
+
+            <article class="service-item">
+              <div>
+                <h3>Online Gym Coaching</h3>
+                <p>Train from home with no space and no equipment required.</p>
+              </div>
+              <span class="service-price">R400 / month</span>
+            </article>
+
+            <article class="service-item">
+              <div>
+                <h3>Family Plan</h3>
+                <p>Train together with a plan for 2 to 4 people.</p>
+              </div>
+              <span class="service-price">R600 / month</span>
+            </article>
+
+            <article class="service-item">
+              <div>
+                <h3>Sunday Reset Live</h3>
+                <p>Free weekly Q&A on TikTok every Sunday from 16:00 to 17:00.</p>
+              </div>
+              <span class="service-price">Free</span>
+            </article>
           </div>
 
-          <a class="cta" href="https://wa.me/27783595264?text=Hello%20Tlou%2C%20I%20want%20to%20book%20services%20and%20buy%20products" target="_blank" rel="noopener noreferrer" aria-label="Book services on WhatsApp">Book / Buy on WhatsApp</a>
-
+          <div class="cta-row">
+            <a class="cta" href="https://wa.me/27783595264?text=Hello%20Tlou%2C%20I%20want%20to%20book%20services%20and%20buy%20products" target="_blank" rel="noopener noreferrer" aria-label="Book services on WhatsApp">Book or buy on WhatsApp</a>
+          </div>
         </div>
 
         <aside class="links-panel">
@@ -468,83 +625,85 @@
             <div class="avatar">
               <img src="images/profile_pic.jpeg" alt="Tlou profile" class="avatar-img" />
             </div>
-            <br>
             <div>
-              <h2> Sweat Studio with Tlou</h2>
-              <p>Curated links, one place, one tap.</p>
+              <h2>Sweat Studio with Tlou</h2>
+              <p>Curated links, bookings, and updates.</p>
             </div>
           </div>
-<br>
+
+          <br>
+
           <nav class="links" aria-label="Social links">
             <a class="link" href="https://wa.me/27783595264?text=Hello%20Tlou%2C%20I%20want%20to%20book%20services%20and%20buy%20products" target="_blank" rel="noreferrer noopener" data-track="social-link" data-platform="whatsapp" data-label="WhatsApp">
               <span class="link-left">
-                <span class="icon">✦</span>
+                <span class="icon">WA</span>
                 <span>
-                  <span class="link-title">WhatsApp (Bookings & Purchases)</span>
-                  <span class="link-subtitle">Message to book services or buy products</span>
+                  <span class="link-title">WhatsApp Bookings</span>
+                  <span class="link-subtitle">Book services or buy products</span>
                 </span>
               </span>
-              <span class="arrow">↗</span>
+              <span class="link-action">Open</span>
             </a>
 
             <a class="link" href="https://www.instagram.com/iamtlou_thebecoming?igsh=eDljZjBkcmFqd3Nw" target="_blank" rel="noreferrer noopener" data-track="social-link" data-platform="instagram" data-label="Instagram">
               <span class="link-left">
-                <span class="icon">◎</span>
+                <span class="icon">IG</span>
                 <span>
                   <span class="link-title">Instagram</span>
                   <span class="link-subtitle">Photos, stories, and updates</span>
                 </span>
               </span>
-              <span class="arrow">↗</span>
+              <span class="link-action">Open</span>
             </a>
 
             <a class="link" href="https://www.tiktok.com/@iamtlou_thebecoming" target="_blank" rel="noreferrer noopener" data-track="social-link" data-platform="tiktok" data-label="TikTok">
               <span class="link-left">
-                <span class="icon">♪</span>
+                <span class="icon">TT</span>
                 <span>
                   <span class="link-title">TikTok</span>
-                  <span class="link-subtitle">Short videos and highlights</span>
+                  <span class="link-subtitle">Short videos and Sunday Reset Live</span>
                 </span>
               </span>
-              <span class="arrow">↗</span>
+              <span class="link-action">Open</span>
             </a>
 
             <a class="link" href="https://www.youtube.com/@IamTlou_TheBecoming-t6d" target="_blank" rel="noreferrer noopener" data-track="social-link" data-platform="youtube" data-label="YouTube">
               <span class="link-left">
-                <span class="icon">▶</span>
+                <span class="icon">YT</span>
                 <span>
                   <span class="link-title">YouTube</span>
                   <span class="link-subtitle">Videos, tutorials, and highlights</span>
                 </span>
               </span>
-              <span class="arrow">↗</span>
+              <span class="link-action">Open</span>
             </a>
 
             <a class="link" href="https://www.facebook.com/share/1CH7HrcHLg/" target="_blank" rel="noreferrer noopener" data-track="social-link" data-platform="facebook" data-label="Facebook">
               <span class="link-left">
-                <span class="icon">f</span>
+                <span class="icon">FB</span>
                 <span>
                   <span class="link-title">Facebook</span>
                   <span class="link-subtitle">Share and connect on Facebook</span>
                 </span>
               </span>
-              <span class="arrow">↗</span>
+              <span class="link-action">Open</span>
             </a>
 
             <a class="link" href="mailto:Tlousweatstudio@gmail.com" data-track="social-link" data-platform="email" data-label="Email">
               <span class="link-left">
-                <span class="icon">✉</span>
+                <span class="icon">@</span>
                 <span>
                   <span class="link-title">Email</span>
                   <span class="link-subtitle">Get in touch directly</span>
                 </span>
               </span>
-              <span class="arrow">↗</span>
+              <span class="link-action">Open</span>
             </a>
           </nav>
 
           <p class="footer-note">
-            &copy; 2026 Sweat Studio with Tlou.<br> Designed by Lehlogonolo Kgatla 
+            &copy; 2026 Sweat Studio with Tlou.<br />
+            Designed by Lehlogonolo Kgatla
           </p>
 
           <p class="sr-only" aria-live="polite" id="analytics-status"></p>
